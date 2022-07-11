@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://sprites/Basic_bathtub.png" type="Texture" id=1]
 [ext_resource path="res://sprites/IMG_1999.jpg" type="Texture" id=2]
@@ -24,7 +24,10 @@
 [ext_resource path="res://sprites/Tentative_prehistoric_crocodile.png" type="Texture" id=22]
 [ext_resource path="res://sprites/Roman_shopkeeper.png" type="Texture" id=23]
 [ext_resource path="res://sprites/IMG_2002.jpg" type="Texture" id=24]
-[ext_resource path="res://icon.png" type="Texture" id=25]
+[ext_resource path="res://sprites/fire.png" type="Texture" id=25]
+[ext_resource path="res://music/roman_times.mp3" type="AudioStream" id=26]
+[ext_resource path="res://sprites/rubble.png" type="Texture" id=27]
+[ext_resource path="res://sprites/IMG_2003.jpg" type="Texture" id=28]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -170,9 +173,9 @@ margin_bottom = 1002.0
 texture_normal = ExtResource( 22 )
 
 [node name="Concert" type="TextureRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = ExtResource( 28 )
 expand = true
 stretch_mode = 7
 
@@ -180,6 +183,7 @@ stretch_mode = 7
 stream = ExtResource( 14 )
 
 [node name="Roman" type="TextureRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 15 )
@@ -187,6 +191,7 @@ expand = true
 stretch_mode = 7
 
 [node name="Music" type="AudioStreamPlayer" parent="Roman"]
+stream = ExtResource( 26 )
 
 [node name="Shopkeeper" type="TextureButton" parent="Roman"]
 margin_left = 726.0
@@ -197,18 +202,17 @@ texture_normal = ExtResource( 23 )
 script = ExtResource( 9 )
 
 [node name="Rubble" type="TextureButton" parent="Roman"]
-margin_left = 223.0
-margin_top = 361.0
-margin_right = 287.0
-margin_bottom = 425.0
-texture_normal = ExtResource( 25 )
+margin_top = 105.0
+margin_right = 500.0
+margin_bottom = 605.0
+texture_normal = ExtResource( 27 )
 script = ExtResource( 9 )
 
 [node name="Fire" type="TextureButton" parent="Roman"]
-margin_left = 626.0
-margin_top = 214.0
-margin_right = 690.0
-margin_bottom = 278.0
+margin_left = 348.0
+margin_top = -79.0
+margin_right = 848.0
+margin_bottom = 421.0
 texture_normal = ExtResource( 25 )
 script = ExtResource( 9 )
 

@@ -56,7 +56,7 @@ text = "Play"
 margin_top = 416.0
 margin_right = 1280.0
 margin_bottom = 440.0
-text = "By Jaya, Exuin, Fusoxide, Tami, and JohnnyCacaoRequiem"
+text = "By Jaya, Exuin, Tami, and JohnnyCacaoRequiem"
 align = 1
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
