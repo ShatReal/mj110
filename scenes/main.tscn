@@ -1,0 +1,238 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://sprites/Basic_bathtub.png" type="Texture" id=1]
+[ext_resource path="res://sprites/IMG_1999.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/main.gd" type="Script" id=3]
+[ext_resource path="res://sprites/Roman_Helmet.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Record_Player.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Basic_Table.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Car_Keys.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Allosaurus_Tooth.png" type="Texture" id=8]
+[ext_resource path="res://scenes/button.gd" type="Script" id=9]
+[ext_resource path="res://sprites/IMG_1998.jpg" type="Texture" id=10]
+[ext_resource path="res://music/mall_music.mp3" type="AudioStream" id=11]
+[ext_resource path="res://sprites/IMG_1997.jpg" type="Texture" id=12]
+[ext_resource path="res://music/jurassic_era_fixed.mp3" type="AudioStream" id=13]
+[ext_resource path="res://music/rock_concert.mp3" type="AudioStream" id=14]
+[ext_resource path="res://sprites/IMG_2001.jpg" type="Texture" id=15]
+[ext_resource path="res://sprites/Chocolate_Gift_Box.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Soap_gift_basket.png" type="Texture" id=17]
+[ext_resource path="res://sprites/Not_LEGO_Gift.png" type="Texture" id=18]
+[ext_resource path="res://sprites/Jar_christmas_present_sprite.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Tentative_Allosaurus.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Tentative_brachiosaurus.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Tentative_prehistoric_crocodile.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Roman_shopkeeper.png" type="Texture" id=23]
+[ext_resource path="res://sprites/IMG_2002.jpg" type="Texture" id=24]
+[ext_resource path="res://icon.png" type="Texture" id=25]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Intro" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="Bathtub" type="TextureRect" parent="Intro"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -541.0
+margin_top = -211.0
+margin_right = -41.0
+margin_bottom = 289.0
+texture = ExtResource( 1 )
+
+[node name="Table" type="TextureRect" parent="Intro"]
+margin_left = 595.0
+margin_top = 108.0
+margin_right = 1195.0
+margin_bottom = 708.0
+texture = ExtResource( 6 )
+
+[node name="RomanHelmet" type="TextureButton" parent="Intro"]
+margin_left = 629.0
+margin_top = 121.0
+margin_right = 779.0
+margin_bottom = 271.0
+texture_normal = ExtResource( 4 )
+script = ExtResource( 9 )
+
+[node name="RecordPlayer" type="TextureButton" parent="Intro"]
+margin_left = 952.0
+margin_top = 106.0
+margin_right = 1161.0
+margin_bottom = 315.0
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 9 )
+
+[node name="CarKeys" type="TextureButton" parent="Intro"]
+margin_left = 764.0
+margin_top = 186.0
+margin_right = 864.0
+margin_bottom = 286.0
+texture_normal = ExtResource( 7 )
+script = ExtResource( 9 )
+
+[node name="Tooth" type="TextureButton" parent="Intro"]
+margin_left = 854.0
+margin_top = 181.0
+margin_right = 954.0
+margin_bottom = 281.0
+texture_normal = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="Music" type="AudioStreamPlayer" parent="Intro"]
+
+[node name="Mall" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="Mall"]
+stream = ExtResource( 11 )
+
+[node name="Choco" type="TextureButton" parent="Mall"]
+margin_left = 70.0
+margin_top = 422.0
+margin_right = 220.0
+margin_bottom = 572.0
+texture_normal = ExtResource( 16 )
+script = ExtResource( 9 )
+
+[node name="Soap" type="TextureButton" parent="Mall"]
+margin_left = 243.0
+margin_top = 422.0
+margin_right = 443.0
+margin_bottom = 622.0
+texture_normal = ExtResource( 17 )
+script = ExtResource( 9 )
+
+[node name="Lego" type="TextureButton" parent="Mall"]
+margin_left = 979.0
+margin_top = 379.0
+margin_right = 1179.0
+margin_bottom = 579.0
+texture_normal = ExtResource( 18 )
+script = ExtResource( 9 )
+
+[node name="Jurassic" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="Jurassic"]
+stream = ExtResource( 13 )
+
+[node name="Jar" type="TextureButton" parent="Jurassic"]
+margin_left = 1052.0
+margin_top = 201.0
+margin_right = 1252.0
+margin_bottom = 401.0
+texture_normal = ExtResource( 19 )
+script = ExtResource( 9 )
+
+[node name="Timer" type="Timer" parent="Jurassic"]
+wait_time = 30.0
+one_shot = true
+
+[node name="TextureRect" type="TextureRect" parent="Jurassic"]
+margin_left = 63.0
+margin_top = -13.0
+margin_right = 623.0
+margin_bottom = 487.0
+texture = ExtResource( 21 )
+
+[node name="Allosaurus" type="TextureButton" parent="Jurassic"]
+margin_left = 421.0
+margin_top = -28.0
+margin_right = 1121.0
+margin_bottom = 672.0
+texture_normal = ExtResource( 20 )
+
+[node name="Crocodile" type="TextureButton" parent="Jurassic"]
+margin_left = 33.0
+margin_top = 302.0
+margin_right = 733.0
+margin_bottom = 1002.0
+texture_normal = ExtResource( 22 )
+
+[node name="Concert" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="Concert"]
+stream = ExtResource( 14 )
+
+[node name="Roman" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="Roman"]
+
+[node name="Shopkeeper" type="TextureButton" parent="Roman"]
+margin_left = 726.0
+margin_top = 78.0
+margin_right = 1226.0
+margin_bottom = 578.0
+texture_normal = ExtResource( 23 )
+script = ExtResource( 9 )
+
+[node name="Rubble" type="TextureButton" parent="Roman"]
+margin_left = 223.0
+margin_top = 361.0
+margin_right = 287.0
+margin_bottom = 425.0
+texture_normal = ExtResource( 25 )
+script = ExtResource( 9 )
+
+[node name="Fire" type="TextureButton" parent="Roman"]
+margin_left = 626.0
+margin_top = 214.0
+margin_right = 690.0
+margin_bottom = 278.0
+texture_normal = ExtResource( 25 )
+script = ExtResource( 9 )
+
+[node name="Dinner" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 7
+
+[node name="Music" type="AudioStreamPlayer" parent="Dinner"]
+
+[connection signal="pressed" from="Intro/RomanHelmet" to="." method="_on_RomanHelmet_pressed"]
+[connection signal="pressed" from="Intro/RecordPlayer" to="." method="_on_RecordPlayer_pressed"]
+[connection signal="pressed" from="Intro/CarKeys" to="." method="_on_CarKeys_pressed"]
+[connection signal="pressed" from="Intro/Tooth" to="." method="_on_Tooth_pressed"]
+[connection signal="pressed" from="Mall/Choco" to="." method="_on_Choco_pressed"]
+[connection signal="pressed" from="Mall/Soap" to="." method="_on_Soap_pressed"]
+[connection signal="pressed" from="Mall/Lego" to="." method="_on_Lego_pressed"]
+[connection signal="pressed" from="Jurassic/Jar" to="." method="_on_Jar_pressed"]
+[connection signal="timeout" from="Jurassic/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Jurassic/Allosaurus" to="." method="_on_Allosaurus_pressed"]
+[connection signal="pressed" from="Jurassic/Crocodile" to="." method="_on_Crocodile_pressed"]
+[connection signal="pressed" from="Roman/Shopkeeper" to="." method="_on_Shopkeeper_pressed"]
+[connection signal="pressed" from="Roman/Rubble" to="." method="_on_Rubble_pressed"]
+[connection signal="pressed" from="Roman/Fire" to="." method="_on_Fire_pressed"]
